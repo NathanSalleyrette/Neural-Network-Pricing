@@ -15,6 +15,8 @@ namespace NeuralNetwork.Layers
 
         private int _batchsize;
 
+        private int M { get; }
+
         private Matrix<double> BiasBeforeBatch;
 
         public int BatchSize { get => _batchsize; 
@@ -58,6 +60,7 @@ namespace NeuralNetwork.Layers
             Activation = Matrix<double>.Build.Dense(LayerSize, BatchSize);
             NetInput = Matrix<double>.Build.Dense(LayerSize, BatchSize);
             Input = Matrix<double>.Build.Dense(LayerSize, BatchSize);
+            M = Input.ColumnCount;
             B = Matrix<double>.Build.Dense(LayerSize, BatchSize);
             Gradient = gradientAdjustment;
             InitialWeights = initialWeights;
@@ -80,13 +83,14 @@ namespace NeuralNetwork.Layers
             NetInput.Map(Activator.ApplyDerivative, B);
             B.PointwiseMultiply(upstreamWeightedErrors, B);
             WeightedError = InitialWeights * B;
+
         }
 
         public void UpdateParameters()
         {
             // on multiplie par 1.0 / BatchSize ou par Input.ColumnCount 
-            InitialWeights -= (double)(1.0 / Input.ColumnCount) * Gradient.Apply(Input * B.Transpose());
-            InitialBias -= (double)(1.0 / Input.ColumnCount) * Gradient.Apply(B);
+            InitialWeights +=  Gradient.VWeight((double)(1.0 / M) *  Input * B.Transpose());
+            InitialBias +=  Gradient.VBias((double)(1.0 / M) * B);
         }
 
         public bool Equals(ILayer other)

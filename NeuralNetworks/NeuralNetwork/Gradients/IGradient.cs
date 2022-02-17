@@ -10,8 +10,10 @@ namespace NeuralNetwork.Gradients
     public interface IGradient
     {
 
-        Func<Matrix<double>, Matrix<double>> Apply { get;  }
 
+        Func<Matrix<double>, Matrix<double>> VWeight { get;  }
+        Func<Matrix<double>, Matrix<double>> VBias { get; }
         GradientAdjustmentType Type { get;  }
+
     }
 }

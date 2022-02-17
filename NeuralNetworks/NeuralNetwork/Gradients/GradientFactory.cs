@@ -10,7 +10,7 @@ namespace NeuralNetwork.Gradients
             switch (gradientAdjustment.Type)
             {
                 case GradientAdjustmentType.FixedLearningRate:
-                    return new Fixed((FixedLearningRateParameters) gradientAdjustment);
+                    return new Fixed(gradientAdjustment as FixedLearningRateParameters);
 
                 //case GradientAdjustmentType.Momentum:
                 //    return new Identity();

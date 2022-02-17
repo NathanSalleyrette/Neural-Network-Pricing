@@ -10,3 +10,15 @@ C:\Users\localuser\Documents\Neurone\NeuralNetworks\NeuralNetwork\obj\Debug\nets
 C:\Users\localuser\Documents\Neurone\NeuralNetworks\NeuralNetwork\obj\Debug\netstandard2.1\NeuralNetwork.csproj.CopyComplete
 C:\Users\localuser\Documents\Neurone\NeuralNetworks\NeuralNetwork\obj\Debug\netstandard2.1\NeuralNetwork.dll
 C:\Users\localuser\Documents\Neurone\NeuralNetworks\NeuralNetwork\obj\Debug\netstandard2.1\NeuralNetwork.pdb
+C:\Users\localuser\Documents\Neurone\neural_network\NeuralNetworks\NeuralNetwork\bin\Debug\netstandard2.1\NeuralNetwork.deps.json
+C:\Users\localuser\Documents\Neurone\neural_network\NeuralNetworks\NeuralNetwork\bin\Debug\netstandard2.1\NeuralNetwork.dll
+C:\Users\localuser\Documents\Neurone\neural_network\NeuralNetworks\NeuralNetwork\bin\Debug\netstandard2.1\NeuralNetwork.pdb
+C:\Users\localuser\Documents\Neurone\neural_network\NeuralNetworks\NeuralNetwork\bin\Debug\netstandard2.1\NeuralNetwork.Common.dll
+C:\Users\localuser\Documents\Neurone\neural_network\NeuralNetworks\NeuralNetwork\bin\Debug\netstandard2.1\NeuralNetwork.Common.pdb
+C:\Users\localuser\Documents\Neurone\neural_network\NeuralNetworks\NeuralNetwork\obj\Debug\netstandard2.1\NeuralNetwork.csproj.AssemblyReference.cache
+C:\Users\localuser\Documents\Neurone\neural_network\NeuralNetworks\NeuralNetwork\obj\Debug\netstandard2.1\NeuralNetwork.AssemblyInfoInputs.cache
+C:\Users\localuser\Documents\Neurone\neural_network\NeuralNetworks\NeuralNetwork\obj\Debug\netstandard2.1\NeuralNetwork.AssemblyInfo.cs
+C:\Users\localuser\Documents\Neurone\neural_network\NeuralNetworks\NeuralNetwork\obj\Debug\netstandard2.1\NeuralNetwork.csproj.CoreCompileInputs.cache
+C:\Users\localuser\Documents\Neurone\neural_network\NeuralNetworks\NeuralNetwork\obj\Debug\netstandard2.1\NeuralNetwork.csproj.CopyComplete
+C:\Users\localuser\Documents\Neurone\neural_network\NeuralNetworks\NeuralNetwork\obj\Debug\netstandard2.1\NeuralNetwork.dll
+C:\Users\localuser\Documents\Neurone\neural_network\NeuralNetworks\NeuralNetwork\obj\Debug\netstandard2.1\NeuralNetwork.pdb
