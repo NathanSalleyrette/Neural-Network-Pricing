@@ -31,7 +31,7 @@ namespace NeuralNetwork.Serialization
             var bias = Matrix<double>.Build.DenseOfColumnArrays(new double[][] { standardSerialized.Bias });
             var inputSize = weights.RowCount;
             var layerSize = weights.ColumnCount;
-            var gradientAdjustment = GradientFactory.Build(standardSerialized.GradientAdjustmentParameters);
+            var gradientAdjustment = GradientFactory.Build(standardSerialized.GradientAdjustmentParameters, weights, bias, batchSize);
             var activator = ActivatorFactory.Build(standardSerialized.ActivatorType);
             return new BasicStandardLayer(weights, gradientAdjustment, bias, batchSize, activator, standardSerialized.GradientAdjustmentParameters);
         }

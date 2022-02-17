@@ -1,19 +1,20 @@
 ﻿using NeuralNetwork.Common.GradientAdjustmentParameters;
+using MathNet.Numerics.LinearAlgebra;
 using System;
 
 namespace NeuralNetwork.Gradients
 {
     internal static class GradientFactory
     {
-        public static IGradient Build(IGradientAdjustmentParameters gradientAdjustment)
+        public static IGradient Build(IGradientAdjustmentParameters gradientAdjustment, Matrix<double> weight, Matrix<double> bias, int batchSize)
         {
             switch (gradientAdjustment.Type)
             {
                 case GradientAdjustmentType.FixedLearningRate:
                     return new Fixed(gradientAdjustment as FixedLearningRateParameters);
 
-                //case GradientAdjustmentType.Momentum:
-                //    return new Identity();
+                case GradientAdjustmentType.Momentum:
+                    return new Momentum(gradientAdjustment as MomentumParameters, weight, bias, batchSize);
 
                 //case GradientAdjustmentType.Nesterov:
                 //    return;

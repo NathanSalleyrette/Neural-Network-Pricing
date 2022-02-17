@@ -10,9 +10,19 @@ namespace NeuralNetwork.Gradients
     {
 
         private double learningRate;
-        public Momentum(FixedLearningRateParameters gradient)
+
+        private double momentum;
+
+        private Matrix<double> vBias;
+
+        private Matrix<double> vWeight;
+        public Momentum(MomentumParameters gradient, Matrix<double> weight, Matrix<double> bias, int batchSize)
         {
             learningRate = gradient.LearningRate;
+            momentum = gradient.Momentum;
+            vWeight = Matrix<double>.Build.Dense(weight.RowCount, weight.ColumnCount, 0.0);
+            vBias = Matrix<double>.Build.Dense(bias.RowCount, bias.ColumnCount, 0.0);
+
         }
         public Func<Matrix<double>, Matrix<double>> VBias => (mat) => mat.Multiply(-learningRate);
 
@@ -21,4 +31,5 @@ namespace NeuralNetwork.Gradients
         public GradientAdjustmentType Type => GradientAdjustmentType.FixedLearningRate;
     }
 }
-}
+
+
