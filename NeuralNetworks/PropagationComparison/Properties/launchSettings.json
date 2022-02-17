@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "PropagationComparison": {
+      "commandName": "Project",
+      "commandLineArgs": ".\\network.json .\\input.csv .\\gradient.csv"
+    }
+  }
+}

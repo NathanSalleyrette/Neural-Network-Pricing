@@ -1,0 +1,340 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\localuser\\Documents\\Neurone\\neural_network\\NeuralNetworks\\TrainingConsole\\TrainingConsole.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\localuser\\Documents\\Neurone\\neural_network\\NeuralNetworks\\DataProviders\\DataProviders.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\localuser\\Documents\\Neurone\\neural_network\\NeuralNetworks\\DataProviders\\DataProviders.csproj",
+        "projectName": "DataProviders",
+        "projectPath": "C:\\Users\\localuser\\Documents\\Neurone\\neural_network\\NeuralNetworks\\DataProviders\\DataProviders.csproj",
+        "packagesPath": "C:\\Users\\localuser\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\localuser\\Documents\\Neurone\\neural_network\\NeuralNetworks\\DataProviders\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\localuser\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\localuser\\Desktop": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "C:\\Users\\localuser\\Documents\\Neurone\\neural_network\\NeuralNetworks\\NeuralNetwork.Common\\NeuralNetwork.Common.csproj": {
+                "projectPath": "C:\\Users\\localuser\\Documents\\Neurone\\neural_network\\NeuralNetworks\\NeuralNetwork.Common\\NeuralNetwork.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "MathNet.Numerics": {
+              "target": "Package",
+              "version": "[4.15.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\localuser\\Documents\\Neurone\\neural_network\\NeuralNetworks\\NeuralNetwork.Common\\NeuralNetwork.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\localuser\\Documents\\Neurone\\neural_network\\NeuralNetworks\\NeuralNetwork.Common\\NeuralNetwork.Common.csproj",
+        "projectName": "NeuralNetwork.Common",
+        "projectPath": "C:\\Users\\localuser\\Documents\\Neurone\\neural_network\\NeuralNetworks\\NeuralNetwork.Common\\NeuralNetwork.Common.csproj",
+        "packagesPath": "C:\\Users\\localuser\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\localuser\\Documents\\Neurone\\neural_network\\NeuralNetworks\\NeuralNetwork.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\localuser\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\localuser\\Desktop": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "MathNet.Numerics": {
+              "target": "Package",
+              "version": "[4.15.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\localuser\\Documents\\Neurone\\neural_network\\NeuralNetworks\\NeuralNetwork\\NeuralNetwork.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\localuser\\Documents\\Neurone\\neural_network\\NeuralNetworks\\NeuralNetwork\\NeuralNetwork.csproj",
+        "projectName": "NeuralNetwork",
+        "projectPath": "C:\\Users\\localuser\\Documents\\Neurone\\neural_network\\NeuralNetworks\\NeuralNetwork\\NeuralNetwork.csproj",
+        "packagesPath": "C:\\Users\\localuser\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\localuser\\Documents\\Neurone\\neural_network\\NeuralNetworks\\NeuralNetwork\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\localuser\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\localuser\\Desktop": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "C:\\Users\\localuser\\Documents\\Neurone\\neural_network\\NeuralNetworks\\NeuralNetwork.Common\\NeuralNetwork.Common.csproj": {
+                "projectPath": "C:\\Users\\localuser\\Documents\\Neurone\\neural_network\\NeuralNetworks\\NeuralNetwork.Common\\NeuralNetwork.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "MathNet.Numerics": {
+              "target": "Package",
+              "version": "[4.15.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\localuser\\Documents\\Neurone\\neural_network\\NeuralNetworks\\Trainer\\Trainer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\localuser\\Documents\\Neurone\\neural_network\\NeuralNetworks\\Trainer\\Trainer.csproj",
+        "projectName": "Trainer",
+        "projectPath": "C:\\Users\\localuser\\Documents\\Neurone\\neural_network\\NeuralNetworks\\Trainer\\Trainer.csproj",
+        "packagesPath": "C:\\Users\\localuser\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\localuser\\Documents\\Neurone\\neural_network\\NeuralNetworks\\Trainer\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\localuser\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\localuser\\Desktop": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "C:\\Users\\localuser\\Documents\\Neurone\\neural_network\\NeuralNetworks\\NeuralNetwork.Common\\NeuralNetwork.Common.csproj": {
+                "projectPath": "C:\\Users\\localuser\\Documents\\Neurone\\neural_network\\NeuralNetworks\\NeuralNetwork.Common\\NeuralNetwork.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "MathNet.Numerics": {
+              "target": "Package",
+              "version": "[4.15.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\localuser\\Documents\\Neurone\\neural_network\\NeuralNetworks\\TrainingConsole\\TrainingConsole.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\localuser\\Documents\\Neurone\\neural_network\\NeuralNetworks\\TrainingConsole\\TrainingConsole.csproj",
+        "projectName": "TrainingConsole",
+        "projectPath": "C:\\Users\\localuser\\Documents\\Neurone\\neural_network\\NeuralNetworks\\TrainingConsole\\TrainingConsole.csproj",
+        "packagesPath": "C:\\Users\\localuser\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\localuser\\Documents\\Neurone\\neural_network\\NeuralNetworks\\TrainingConsole\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\localuser\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\localuser\\Desktop": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\localuser\\Documents\\Neurone\\neural_network\\NeuralNetworks\\DataProviders\\DataProviders.csproj": {
+                "projectPath": "C:\\Users\\localuser\\Documents\\Neurone\\neural_network\\NeuralNetworks\\DataProviders\\DataProviders.csproj"
+              },
+              "C:\\Users\\localuser\\Documents\\Neurone\\neural_network\\NeuralNetworks\\NeuralNetwork.Common\\NeuralNetwork.Common.csproj": {
+                "projectPath": "C:\\Users\\localuser\\Documents\\Neurone\\neural_network\\NeuralNetworks\\NeuralNetwork.Common\\NeuralNetwork.Common.csproj"
+              },
+              "C:\\Users\\localuser\\Documents\\Neurone\\neural_network\\NeuralNetworks\\NeuralNetwork\\NeuralNetwork.csproj": {
+                "projectPath": "C:\\Users\\localuser\\Documents\\Neurone\\neural_network\\NeuralNetworks\\NeuralNetwork\\NeuralNetwork.csproj"
+              },
+              "C:\\Users\\localuser\\Documents\\Neurone\\neural_network\\NeuralNetworks\\Trainer\\Trainer.csproj": {
+                "projectPath": "C:\\Users\\localuser\\Documents\\Neurone\\neural_network\\NeuralNetworks\\Trainer\\Trainer.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
