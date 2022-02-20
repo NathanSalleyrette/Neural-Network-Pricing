@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "4fZnLHcchT+P5gSscJ6Nj9FEMwuuVXCvDIh26Ep//WhITv/WCpCnz5M57iH5bspapLm3mn/yWbyLzgk7tJc49g==",
+  "dgSpecHash": "dLKSm9nWFTTgqssDFimUmix13kLxlWV+Rl+vgm/vEVztOt1nvhU5lJ7nPbkLHLh9vdJ3VDModZQOgMGfpIrvKA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\localuser\\Documents\\Neurone\\neural_network\\NeuralNetworks\\PropagationComparison\\PropagationComparison.csproj",
+  "projectFilePath": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\neural_network\\NeuralNetworks\\PropagationComparison\\PropagationComparison.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\localuser\\.nuget\\packages\\mathnet.numerics\\4.15.0\\mathnet.numerics.4.15.0.nupkg.sha512",
-    "C:\\Users\\localuser\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
-    "C:\\Users\\localuser\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
-    "C:\\Users\\localuser\\.nuget\\packages\\system.data.datasetextensions\\4.5.0\\system.data.datasetextensions.4.5.0.nupkg.sha512"
+    "C:\\Users\\nicol\\.nuget\\packages\\mathnet.numerics\\4.15.0\\mathnet.numerics.4.15.0.nupkg.sha512",
+    "C:\\Users\\nicol\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\nicol\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\nicol\\.nuget\\packages\\system.data.datasetextensions\\4.5.0\\system.data.datasetextensions.4.5.0.nupkg.sha512"
   ],
   "logs": []
 }

@@ -15,20 +15,39 @@ namespace NeuralNetwork.Gradients
 
         private Matrix<double> vBias;
 
+        private Matrix<double> vBiasAfterBatch;
+
         private Matrix<double> vWeight;
         public Momentum(MomentumParameters gradient, Matrix<double> weight, Matrix<double> bias, int batchSize)
         {
             learningRate = gradient.LearningRate;
             momentum = gradient.Momentum;
             vWeight = Matrix<double>.Build.Dense(weight.RowCount, weight.ColumnCount, 0.0);
+            
+            // Matrice Colonne
             vBias = Matrix<double>.Build.Dense(bias.RowCount, bias.ColumnCount, 0.0);
 
         }
-        public Func<Matrix<double>, Matrix<double>> VBias => (mat) => mat.Multiply(-learningRate);
+        public Func<Matrix<double>, Matrix<double>> VBias => (mat) =>
+        {
+            vBiasAfterBatch = vBias.Multiply(Matrix<double>.Build.Dense(1, mat.ColumnCount, 1.0));
+            vBiasAfterBatch = vBiasAfterBatch.Multiply(momentum) - mat.Multiply(learningRate);
+            
+            // Mean of Columns to have a vector of Bias
+            vBias = vBiasAfterBatch.FoldColumns<double>(
+               (s, x) => s + x,
+               Vector<double>.Build.Dense(vBiasAfterBatch.RowCount, 0.0))
+                .Multiply((double)1 / vBiasAfterBatch.ColumnCount).ToColumnMatrix();
+            
+            return vBiasAfterBatch;
+        };
+        public Func<Matrix<double>, Matrix<double>> VWeight => (mat) => 
+        {
+           vWeight = vWeight.Multiply(momentum) - mat.Multiply(learningRate);
+           return vWeight;
+        };
 
-        public Func<Matrix<double>, Matrix<double>> VWeight => (mat) => mat.Multiply(-learningRate);
-
-        public GradientAdjustmentType Type => GradientAdjustmentType.FixedLearningRate;
+        public GradientAdjustmentType Type => GradientAdjustmentType.Momentum;
     }
 }
 

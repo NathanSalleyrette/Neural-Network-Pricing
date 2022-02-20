@@ -17,11 +17,11 @@ namespace NeuralNetwork.Layers
 
         private int M { get; }
 
-        private Matrix<double> BiasBeforeBatch;
+        private Matrix<double> BiasAfterBatch;
 
         public int BatchSize { get => _batchsize; 
             set { _batchsize = value;
-                InitialBias = BiasBeforeBatch.Multiply(Matrix<double>.Build.Dense(1, value, 1.0));
+                BiasAfterBatch = InitialBias.Multiply(Matrix<double>.Build.Dense(1, value, 1.0));
                 Activation = Matrix<double>.Build.Dense(Activation.RowCount, value);
                 B = Matrix<double>.Build.Dense(B.RowCount, value);
                 
@@ -64,15 +64,15 @@ namespace NeuralNetwork.Layers
             B = Matrix<double>.Build.Dense(LayerSize, BatchSize);
             Gradient = gradientAdjustment;
             InitialWeights = initialWeights;
-            BiasBeforeBatch = initialBias;
+            InitialBias = initialBias;
             GradientAdjustment = grad;
-            InitialBias = BiasBeforeBatch.Multiply(Matrix<double>.Build.Dense(1, batchSize, 1.0));
+            BiasAfterBatch = InitialBias.Multiply(Matrix<double>.Build.Dense(1, batchSize, 1.0));
         }
 
         public void Propagate(Matrix<double> input)
         {
             Input = input;
-            NetInput = InitialWeights.Transpose() * input + InitialBias;
+            NetInput = InitialWeights.Transpose() * input + BiasAfterBatch;
 
             //NetInput = InitialWeights.Transpose() * input + InitialBias;
             NetInput.Map(Activator.Apply, Activation);
@@ -90,7 +90,14 @@ namespace NeuralNetwork.Layers
         {
             // on multiplie par 1.0 / BatchSize ou par Input.ColumnCount 
             InitialWeights +=  Gradient.VWeight((double)(1.0 / M) *  Input * B.Transpose());
-            InitialBias +=  Gradient.VBias((double)(1.0 / M) * B);
+            BiasAfterBatch +=  Gradient.VBias((double)(1.0 / M) * B);
+
+            InitialBias = BiasAfterBatch.FoldColumns<double>(
+                (s, x) => s + x, Vector<double>.Build.Dense(BiasAfterBatch.RowCount, 0.0))
+                .Multiply((double) 1/ BiasAfterBatch.ColumnCount)
+                .ToColumnMatrix();
+
+
         }
 
         public bool Equals(ILayer other)
