@@ -9,14 +9,14 @@ namespace NeuralNetwork.Gradients
 {
     public class Fixed : IGradient
     {
-        private double learningRate;
+        public double LearningRate { get; }
         public Fixed(FixedLearningRateParameters gradient)
         {
-            learningRate = gradient.LearningRate;
+            LearningRate = gradient.LearningRate;
         }
-        public Func<Matrix<double>, Matrix<double>> VBias => (mat) => mat.Multiply(- learningRate);
+        public Func<Matrix<double>, Matrix<double>> VBias => (mat) => mat.Multiply(- LearningRate);
 
-        public Func<Matrix<double>, Matrix<double>> VWeight => (mat) => mat.Multiply(-learningRate);
+        public Func<Matrix<double>, Matrix<double>> VWeight => (mat) => mat.Multiply(- LearningRate);
 
         public GradientAdjustmentType Type => GradientAdjustmentType.FixedLearningRate;
     }

@@ -18,7 +18,11 @@ namespace NeuralNetwork.Serialization
                 case LayerType.Standard:
                     var standardSerialized = serializedLayer as SerializedStandardLayer;
                     return DeserializeBasicStandardLayer(standardSerialized, batchSize);
-                
+
+                case LayerType.L2Penalty:
+                    var l2PenaltySerialized = serializedLayer as SerializedL2PenaltyLayer;
+                    return DeserializeL2PenaltyLayer(l2PenaltySerialized, batchSize);
+
                 default:
                     throw new InvalidOperationException("Unknown layer type to deserialize");
             }
@@ -34,6 +38,23 @@ namespace NeuralNetwork.Serialization
             var gradientAdjustment = GradientFactory.Build(standardSerialized.GradientAdjustmentParameters, weights, bias, batchSize);
             var activator = ActivatorFactory.Build(standardSerialized.ActivatorType);
             return new BasicStandardLayer(weights, gradientAdjustment, bias, batchSize, activator, standardSerialized.GradientAdjustmentParameters);
+        }
+
+        private static ILayer DeserializeL2PenaltyLayer(SerializedL2PenaltyLayer l2PenaltySerialized, int batchSize)
+        {
+            // On déséréalise tout ici ? ou dans L2Layer ? 
+            var penalty = l2PenaltySerialized.PenaltyCoefficient;
+            switch (l2PenaltySerialized.UnderlyingSerializedLayer.Type)
+            {
+                case LayerType.Standard:
+                    var basicStandardLayer = DeserializeBasicStandardLayer(l2PenaltySerialized.UnderlyingSerializedLayer as SerializedStandardLayer, batchSize);
+                    return new L2Layer(basicStandardLayer as BasicStandardLayer, penalty);
+
+                default:
+                    throw new InvalidOperationException("Unknown layer type to deserialize");
+
+            }
+
         }
     }
 }

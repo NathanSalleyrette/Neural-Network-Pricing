@@ -1,0 +1,54 @@
+{
+  "BatchSize": 3,
+  "SerializedLayers": [
+    {
+      "Type": "L2Penalty",
+      "UnderlyingSerializedLayer": {
+        "Bias": [
+          -0.8994068218699465,
+          -0.0009047989011855165
+        ],
+        "Weights": [
+          [
+            0.8500895884967237,
+            2.241565753893616E-06
+          ],
+          [
+            0.9005901779278611,
+            1.1086273689554066E-06
+          ]
+        ],
+        "ActivatorType": "LeakyReLU",
+        "GradientAdjustmentParameters": {
+          "LearningRate": 1.0,
+          "Type": "FixedLearningRate"
+        },
+        "Type": "Standard"
+      },
+      "PenaltyCoefficient": 0.01
+    },
+    {
+      "Type": "L2Penalty",
+      "UnderlyingSerializedLayer": {
+        "Bias": [
+          0.8352106242196699
+        ],
+        "Weights": [
+          [
+            -0.9131645880276527
+          ],
+          [
+            7.489198446207817E-05
+          ]
+        ],
+        "ActivatorType": "LeakyReLU",
+        "GradientAdjustmentParameters": {
+          "LearningRate": 1.0,
+          "Type": "FixedLearningRate"
+        },
+        "Type": "Standard"
+      },
+      "PenaltyCoefficient": 0.01
+    }
+  ]
+}

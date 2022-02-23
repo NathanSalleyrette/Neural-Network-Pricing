@@ -88,8 +88,9 @@ namespace NeuralNetwork.Layers
 
         public void UpdateParameters()
         {
-            // on multiplie par 1.0 / BatchSize ou par Input.ColumnCount 
-            InitialWeights +=  Gradient.VWeight((double)(1.0 / M) *  Input * B.Transpose());
+            // on multiplie par 1.0 / BatchSize ou par Input.ColumnCount
+            // Seul les weight sont touchés par la penalty de la L2 regularization
+            InitialWeights = InitialWeights + Gradient.VWeight((double)(1.0 / M) *  Input * B.Transpose());
             BiasAfterBatch +=  Gradient.VBias((double)(1.0 / M) * B);
 
             InitialBias = BiasAfterBatch.FoldColumns<double>(
@@ -98,6 +99,21 @@ namespace NeuralNetwork.Layers
                 .ToColumnMatrix();
 
 
+        }
+
+        // Surchage, bonne idée ? Duplication de code pas ouf
+        // Fonctionne uniquement pour la reg L2, demander comment améliorer cela
+        public void UpdateParameters(double penalty)
+        {
+            // on multiplie par 1.0 / BatchSize ou par Input.ColumnCount
+            // Seul les weight sont touchés par la penalty de la L2 regularization
+            InitialWeights = InitialWeights * (1 - penalty * Gradient.LearningRate) + Gradient.VWeight((double)(1.0 / M) * Input * B.Transpose());
+            BiasAfterBatch += Gradient.VBias((double)(1.0 / M) * B);
+
+            InitialBias = BiasAfterBatch.FoldColumns<double>(
+                (s, x) => s + x, Vector<double>.Build.Dense(BiasAfterBatch.RowCount, 0.0))
+                .Multiply((double)1 / BiasAfterBatch.ColumnCount)
+                .ToColumnMatrix();
         }
 
         public bool Equals(ILayer other)

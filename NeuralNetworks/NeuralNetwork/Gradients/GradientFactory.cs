@@ -14,6 +14,8 @@ namespace NeuralNetwork.Gradients
                     return new Fixed(gradientAdjustment as FixedLearningRateParameters);
 
                 case GradientAdjustmentType.Momentum:
+
+                    // Remove Batch Size, it's not used by Momentum
                     return new Momentum(gradientAdjustment as MomentumParameters, weight, bias, batchSize);
 
                 //case GradientAdjustmentType.Nesterov:

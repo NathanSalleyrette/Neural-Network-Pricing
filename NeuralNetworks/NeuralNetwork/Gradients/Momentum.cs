@@ -9,7 +9,7 @@ namespace NeuralNetwork.Gradients
     public class Momentum : IGradient
     {
 
-        private double learningRate;
+        public double LearningRate { get; }
 
         private double momentum;
 
@@ -20,7 +20,7 @@ namespace NeuralNetwork.Gradients
         private Matrix<double> vWeight;
         public Momentum(MomentumParameters gradient, Matrix<double> weight, Matrix<double> bias, int batchSize)
         {
-            learningRate = gradient.LearningRate;
+            LearningRate = gradient.LearningRate;
             momentum = gradient.Momentum;
             vWeight = Matrix<double>.Build.Dense(weight.RowCount, weight.ColumnCount, 0.0);
             
@@ -31,7 +31,7 @@ namespace NeuralNetwork.Gradients
         public Func<Matrix<double>, Matrix<double>> VBias => (mat) =>
         {
             vBiasAfterBatch = vBias.Multiply(Matrix<double>.Build.Dense(1, mat.ColumnCount, 1.0));
-            vBiasAfterBatch = vBiasAfterBatch.Multiply(momentum) - mat.Multiply(learningRate);
+            vBiasAfterBatch = vBiasAfterBatch.Multiply(momentum) - mat.Multiply(LearningRate);
             
             // Mean of Columns to have a vector of Bias
             vBias = vBiasAfterBatch.FoldColumns<double>(
@@ -43,7 +43,7 @@ namespace NeuralNetwork.Gradients
         };
         public Func<Matrix<double>, Matrix<double>> VWeight => (mat) => 
         {
-           vWeight = vWeight.Multiply(momentum) - mat.Multiply(learningRate);
+           vWeight = vWeight.Multiply(momentum) - mat.Multiply(LearningRate);
            return vWeight;
         };
 

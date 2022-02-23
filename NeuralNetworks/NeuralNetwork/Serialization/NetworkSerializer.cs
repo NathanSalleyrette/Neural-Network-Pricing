@@ -22,6 +22,16 @@ namespace NeuralNetwork.Serialization
                         
                         var Serializedlayer = new SerializedStandardLayer(bl.InitialBias.ToColumnMajorArray(), bl.InitialWeights.ToArray(), bl.Activator.Type, bl.GradientAdjustment);
                         SerializedLayers[i] = Serializedlayer;
+                        
+                        break;
+
+                    case L2Layer l2l:
+                        var bsl = l2l.StandardLayer;
+                        var SerializedStandardlayer = new SerializedStandardLayer(bsl.InitialBias.ToColumnMajorArray(), bsl.InitialWeights.ToArray(), bsl.Activator.Type, bsl.GradientAdjustment);
+
+                        var SerializedL2layer = new SerializedL2PenaltyLayer(SerializedStandardlayer, l2l.PenaltyCoefficient);
+                        SerializedLayers[i] = SerializedL2layer;
+                        
                         break;
 
                     default:
