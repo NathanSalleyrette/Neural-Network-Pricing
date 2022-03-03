@@ -90,8 +90,8 @@ namespace NeuralNetwork.Layers
         {
             // on multiplie par 1.0 / BatchSize ou par Input.ColumnCount
             // Seul les weight sont touchés par la penalty de la L2 regularization
-            InitialWeights = InitialWeights + Gradient.VWeight((double)(1.0 / M) *  Input * B.Transpose());
-            BiasAfterBatch +=  Gradient.VBias((double)(1.0 / M) * B);
+            InitialWeights = InitialWeights + Gradient.VWeight((double)(1.0 / BatchSize) *  Input * B.Transpose());
+            BiasAfterBatch +=  Gradient.VBias((double)(1.0 / BatchSize) * B);
 
             InitialBias = BiasAfterBatch.FoldColumns<double>(
                 (s, x) => s + x, Vector<double>.Build.Dense(BiasAfterBatch.RowCount, 0.0))
@@ -107,8 +107,8 @@ namespace NeuralNetwork.Layers
         {
             // on multiplie par 1.0 / BatchSize ou par Input.ColumnCount
             // Seul les weight sont touchés par la penalty de la L2 regularization
-            InitialWeights = InitialWeights * (1 - penalty * Gradient.LearningRate) + Gradient.VWeight((double)(1.0 / M) * Input * B.Transpose());
-            BiasAfterBatch += Gradient.VBias((double)(1.0 / M) * B);
+            InitialWeights = InitialWeights * (1 - penalty * Gradient.LearningRate) + Gradient.VWeight((double)(1.0 / BatchSize) * Input * B.Transpose());
+            BiasAfterBatch += Gradient.VBias((double)(1.0 / BatchSize) * B);
 
             InitialBias = BiasAfterBatch.FoldColumns<double>(
                 (s, x) => s + x, Vector<double>.Build.Dense(BiasAfterBatch.RowCount, 0.0))
