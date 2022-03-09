@@ -1,0 +1,145 @@
+{
+  "BatchSize": 12,
+  "SerializedLayers": [
+    {
+      "Type": "L2Penalty",
+      "PenaltyCoefficient": 0.01,
+      "UnderlyingSerializedLayer": {
+        "Bias": [
+          0.01,
+          0.04,
+          -0.007,
+          0.002
+        ],
+        "Weights": [
+          [
+            0.20672779910028796,
+            -0.21105156952488728,
+            0.288260449,
+            1.03711161
+
+
+          ],
+          [
+            0.30672779910028796,
+            -0.31105156952488728,
+            -0.479776501,
+            -0.125348767
+
+          ],
+          [
+            0.40672779910028796,
+            -0.41105156952488728,
+            0.531835493,
+            0.175536602
+
+
+          ],
+          [
+            0.50672779910028796,
+            -0.51105156952488728,
+            1.180668947,
+            1.24501993
+
+
+          ],
+          [
+            0.60672779910028796,
+            -0.61105156952488728,
+            0.104846833,
+            -0.336815905
+
+          ],
+          [
+            0.9160209591485391,
+            -0.9747823070686068,
+            -0.337426557,
+            -1.154598729
+
+
+          ],
+          [
+            0.10672779910028796,
+            -0.11105156952488728,
+            0.6366226,
+            -0.45137459
+
+
+          ]
+        ],
+        "ActivatorType": "Tanh",
+        "GradientAdjustmentParameters": {
+          "LearningRate": 0.15,
+          "Momentum" : 0.1,
+          "Type": "Momentum"
+        },
+        "Type": "Standard"
+      }
+    },
+    {
+      "Type": "L2Penalty",
+      "PenaltyCoefficient": 0.01,
+      "UnderlyingSerializedLayer": {
+        "Bias": [
+          0.009,
+          -0.02
+        ],
+        "Weights": [
+          [
+            1.365312079,
+            0.529935414
+
+          ],
+          [
+            0.645044465,
+            0.202296586
+
+          ],
+          [
+            -0.7242116,
+            1.244689883
+
+          ],
+          [
+            -0.154211559,
+            2.294528827
+
+          ]
+        ],
+        "ActivatorType": "Tanh",
+        "GradientAdjustmentParameters": {
+          "LearningRate": 0.15,
+          "Type": "Momentum",
+          "Momentum": 0.1
+
+        },
+        "Type": "Standard"
+      }
+    },
+    {
+      "Type": "L2Penalty",
+      "PenaltyCoefficient": 0.01,
+      "UnderlyingSerializedLayer": {
+        "Bias": [
+          0.001
+        ],
+        "Weights": [
+          [
+            -0.3790600869925435
+          ],
+          [
+            -0.14144346015097604
+          ]
+        ],
+        "ActivatorType": "Identity",
+        "GradientAdjustmentParameters": {
+          "LearningRate": 0.2,
+          "Type": "Momentum",
+          "Momentum": 0.1
+
+        },
+        "Type": "Standard"
+      }
+    }
+  ]
+}

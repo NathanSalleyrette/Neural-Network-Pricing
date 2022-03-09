@@ -23,6 +23,10 @@ namespace NeuralNetwork.Serialization
                     var l2PenaltySerialized = serializedLayer as SerializedL2PenaltyLayer;
                     return DeserializeL2PenaltyLayer(l2PenaltySerialized, batchSize);
 
+                case LayerType.InputStandardizing:
+                    var inputStandardSerialized = serializedLayer as SerializedInputStandardizingLayer;
+                    return DeserializeInputStandardizingLayer(inputStandardSerialized, batchSize);
+
                 default:
                     throw new InvalidOperationException("Unknown layer type to deserialize");
             }
@@ -54,6 +58,16 @@ namespace NeuralNetwork.Serialization
                     throw new InvalidOperationException("Unknown layer type to deserialize");
 
             }
+
+        }
+
+        private static ILayer DeserializeInputStandardizingLayer(SerializedInputStandardizingLayer inputStandardizingLayer, int batchSize)
+        {
+            var mean = inputStandardizingLayer.Mean;
+            var stddev = inputStandardizingLayer.StdDev;
+            var underlyingLayer = Deserialize(inputStandardizingLayer.UnderlyingSerializedLayer, batchSize);
+
+            return new InputStandardizingLayer(underlyingLayer, mean, stddev);
 
         }
     }

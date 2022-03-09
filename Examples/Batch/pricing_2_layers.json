@@ -1,9 +1,9 @@
 {
-  "BatchSize": 3,
+  "BatchSize": 11,
   "SerializedLayers": [
     {
       "Type": "L2Penalty",
-      "PenaltyCoefficient": 0.00,
+      "PenaltyCoefficient": 0.3,
       "UnderlyingSerializedLayer": {
         "Bias": [
           0.0,
@@ -11,25 +11,49 @@
         ],
         "Weights": [
           [
-            0.10672779910028796,
-            -0.11105156952488728
+            0.20672779910028796,
+            -0.21105156952488728
+          ],
+          [
+            0.30672779910028796,
+            -0.31105156952488728
+          ],
+          [
+            0.40672779910028796,
+            -0.41105156952488728
+          ],
+          [
+            0.50672779910028796,
+            -0.51105156952488728
+          ],
+          [
+            0.60672779910028796,
+            -0.61105156952488728
+
           ],
           [
             0.9160209591485391,
             -0.9747823070686068
+
+
+          ],
+          [
+            0.10672779910028796,
+            -0.11105156952488728
           ]
         ],
-        "ActivatorType": "LeakyReLU",
+        "ActivatorType": "Tanh",
         "GradientAdjustmentParameters": {
           "LearningRate": 1.0,
-          "Type": "FixedLearningRate"
+          "Momentum": 0.9,
+          "Type": "Momentum"
         },
         "Type": "Standard"
       }
     },
     {
       "Type": "L2Penalty",
-      "PenaltyCoefficient": 0.00,
+      "PenaltyCoefficient": 0.1,
       "UnderlyingSerializedLayer": {
         "Bias": [
           0.0
@@ -42,10 +66,11 @@
             -0.14144346015097604
           ]
         ],
-        "ActivatorType": "LeakyReLU",
+        "ActivatorType": "Identity",
         "GradientAdjustmentParameters": {
           "LearningRate": 1.0,
-          "Type": "FixedLearningRate"
+          "Momentum": 0.9,
+          "Type": "Momentum"
         },
         "Type": "Standard"
       }

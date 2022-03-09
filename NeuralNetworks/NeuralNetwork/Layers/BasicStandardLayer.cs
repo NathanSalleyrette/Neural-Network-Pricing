@@ -107,7 +107,7 @@ namespace NeuralNetwork.Layers
         {
             // on multiplie par 1.0 / BatchSize ou par Input.ColumnCount
             // Seul les weight sont touchés par la penalty de la L2 regularization
-            InitialWeights = InitialWeights * (1 - penalty * Gradient.LearningRate) + Gradient.VWeight((double)(1.0 / BatchSize) * Input * B.Transpose());
+            InitialWeights += Gradient.VWeight((double)(1.0 / BatchSize) * Input * B.Transpose() + InitialWeights.Multiply(penalty));
             BiasAfterBatch += Gradient.VBias((double)(1.0 / BatchSize) * B);
 
             InitialBias = BiasAfterBatch.FoldColumns<double>(

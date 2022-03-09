@@ -34,6 +34,16 @@ namespace NeuralNetwork.Serialization
                         
                         break;
 
+                    case InputStandardizingLayer isl:
+
+                        var usl = isl.UnderlyingLayer as BasicStandardLayer;
+                        var SerializedUsl = new SerializedStandardLayer(usl.InitialBias.ToColumnMajorArray(), usl.InitialWeights.ToArray(), usl.Activator.Type, usl.GradientAdjustment);
+
+                        var SerializedISLLayer = new SerializedInputStandardizingLayer(SerializedUsl, isl.Mean, isl.Stddev);
+                        SerializedLayers[i] = SerializedISLLayer;
+
+                        break;
+
                     default:
                         throw new InvalidOperationException();
                 }
