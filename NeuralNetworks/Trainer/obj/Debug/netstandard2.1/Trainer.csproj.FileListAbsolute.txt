@@ -23,3 +23,15 @@ C:\Users\nicol\OneDrive\Documents\GitHub\neural_network\NeuralNetworks\Trainer\o
 C:\Users\nicol\OneDrive\Documents\GitHub\neural_network\NeuralNetworks\Trainer\obj\Debug\netstandard2.1\Trainer.csproj.CopyComplete
 C:\Users\nicol\OneDrive\Documents\GitHub\neural_network\NeuralNetworks\Trainer\obj\Debug\netstandard2.1\Trainer.dll
 C:\Users\nicol\OneDrive\Documents\GitHub\neural_network\NeuralNetworks\Trainer\obj\Debug\netstandard2.1\Trainer.pdb
+C:\Users\localuser\Documents\Neurone\neural_network\NeuralNetworks\Trainer\bin\Debug\netstandard2.1\Trainer.deps.json
+C:\Users\localuser\Documents\Neurone\neural_network\NeuralNetworks\Trainer\bin\Debug\netstandard2.1\Trainer.dll
+C:\Users\localuser\Documents\Neurone\neural_network\NeuralNetworks\Trainer\bin\Debug\netstandard2.1\Trainer.pdb
+C:\Users\localuser\Documents\Neurone\neural_network\NeuralNetworks\Trainer\bin\Debug\netstandard2.1\NeuralNetwork.Common.dll
+C:\Users\localuser\Documents\Neurone\neural_network\NeuralNetworks\Trainer\bin\Debug\netstandard2.1\NeuralNetwork.Common.pdb
+C:\Users\localuser\Documents\Neurone\neural_network\NeuralNetworks\Trainer\obj\Debug\netstandard2.1\Trainer.csproj.AssemblyReference.cache
+C:\Users\localuser\Documents\Neurone\neural_network\NeuralNetworks\Trainer\obj\Debug\netstandard2.1\Trainer.AssemblyInfoInputs.cache
+C:\Users\localuser\Documents\Neurone\neural_network\NeuralNetworks\Trainer\obj\Debug\netstandard2.1\Trainer.AssemblyInfo.cs
+C:\Users\localuser\Documents\Neurone\neural_network\NeuralNetworks\Trainer\obj\Debug\netstandard2.1\Trainer.csproj.CoreCompileInputs.cache
+C:\Users\localuser\Documents\Neurone\neural_network\NeuralNetworks\Trainer\obj\Debug\netstandard2.1\Trainer.csproj.CopyComplete
+C:\Users\localuser\Documents\Neurone\neural_network\NeuralNetworks\Trainer\obj\Debug\netstandard2.1\Trainer.dll
+C:\Users\localuser\Documents\Neurone\neural_network\NeuralNetworks\Trainer\obj\Debug\netstandard2.1\Trainer.pdb

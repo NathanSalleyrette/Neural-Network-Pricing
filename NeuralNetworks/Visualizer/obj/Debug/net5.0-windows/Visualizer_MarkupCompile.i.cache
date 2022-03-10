@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\nicol\OneDrive\Documents\GitHub\neural_network\NeuralNetworks\Visualizer\obj\Debug\net5.0-windows\
+C:\Users\localuser\Documents\Neurone\neural_network\NeuralNetworks\Visualizer\obj\Debug\net5.0-windows\
 Visualizer
 none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
-C:\Users\nicol\OneDrive\Documents\GitHub\neural_network\NeuralNetworks\Visualizer\App.xaml
+C:\Users\localuser\Documents\Neurone\neural_network\NeuralNetworks\Visualizer\App.xaml
 6-598630734
 
 19-1475203481
-215-1026472224
+215-1230524634
 MainWindow.xaml;NetworkInfo\GradientAccelerators\Adam.xaml;NetworkInfo\GradientAccelerators\NoAccelerator.xaml;NetworkInfo\NetworkInfo.xaml;NetworkInfo\StandardLayerInfo.xaml;Training\TrainingDataView.xaml;
 
-False
+True
 

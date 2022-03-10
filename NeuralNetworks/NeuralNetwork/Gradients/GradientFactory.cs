@@ -21,8 +21,8 @@ namespace NeuralNetwork.Gradients
                 //case GradientAdjustmentType.Nesterov:
                 //    return;
 
-                //case GradientAdjustmentType.Adam:
-                //    return;
+                case GradientAdjustmentType.Adam:
+                    return new Adam(gradientAdjustment as AdamParameters, weight, bias, batchSize);
 
 
                 default:
