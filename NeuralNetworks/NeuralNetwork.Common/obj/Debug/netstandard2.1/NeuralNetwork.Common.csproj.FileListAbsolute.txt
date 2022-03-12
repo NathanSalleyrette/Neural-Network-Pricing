@@ -7,6 +7,7 @@ C:\Users\localuser\Documents\Neurone\NeuralNetworks\NeuralNetwork.Common\obj\Deb
 C:\Users\localuser\Documents\Neurone\NeuralNetworks\NeuralNetwork.Common\obj\Debug\netstandard2.1\NeuralNetwork.Common.csproj.CoreCompileInputs.cache
 C:\Users\localuser\Documents\Neurone\NeuralNetworks\NeuralNetwork.Common\obj\Debug\netstandard2.1\NeuralNetwork.Common.dll
 C:\Users\localuser\Documents\Neurone\NeuralNetworks\NeuralNetwork.Common\obj\Debug\netstandard2.1\NeuralNetwork.Common.pdb
+<<<<<<< Updated upstream
 C:\Users\nicol\OneDrive\Documents\GitHub\neural_network\NeuralNetworks\NeuralNetwork.Common\bin\Debug\netstandard2.1\NeuralNetwork.Common.deps.json
 C:\Users\nicol\OneDrive\Documents\GitHub\neural_network\NeuralNetworks\NeuralNetwork.Common\bin\Debug\netstandard2.1\NeuralNetwork.Common.dll
 C:\Users\nicol\OneDrive\Documents\GitHub\neural_network\NeuralNetworks\NeuralNetwork.Common\bin\Debug\netstandard2.1\NeuralNetwork.Common.pdb
@@ -26,3 +27,5 @@ C:\Users\localuser\Documents\Neurone\neural_network\NeuralNetworks\NeuralNetwork
 C:\Users\localuser\Documents\Neurone\neural_network\NeuralNetworks\NeuralNetwork.Common\obj\Debug\netstandard2.1\NeuralNetwork.Common.csproj.CoreCompileInputs.cache
 C:\Users\localuser\Documents\Neurone\neural_network\NeuralNetworks\NeuralNetwork.Common\obj\Debug\netstandard2.1\NeuralNetwork.Common.dll
 C:\Users\localuser\Documents\Neurone\neural_network\NeuralNetworks\NeuralNetwork.Common\obj\Debug\netstandard2.1\NeuralNetwork.Common.pdb
+=======
+>>>>>>> Stashed changes

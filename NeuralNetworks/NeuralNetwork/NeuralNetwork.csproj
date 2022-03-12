@@ -9,16 +9,19 @@
     <Compile Remove="EvaluationFunctions\**" />
     <Compile Remove="LossFunctions\**" />
     <Compile Remove="NetworkHandlers\**" />
+    <Compile Remove="NewFolder1\**" />
     <Compile Remove="Utils\**" />
     <EmbeddedResource Remove="DataShuffler\**" />
     <EmbeddedResource Remove="EvaluationFunctions\**" />
     <EmbeddedResource Remove="LossFunctions\**" />
     <EmbeddedResource Remove="NetworkHandlers\**" />
+    <EmbeddedResource Remove="NewFolder1\**" />
     <EmbeddedResource Remove="Utils\**" />
     <None Remove="DataShuffler\**" />
     <None Remove="EvaluationFunctions\**" />
     <None Remove="LossFunctions\**" />
     <None Remove="NetworkHandlers\**" />
+    <None Remove="NewFolder1\**" />
     <None Remove="Utils\**" />
   </ItemGroup>
 

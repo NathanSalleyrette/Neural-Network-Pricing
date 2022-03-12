@@ -157,19 +157,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\localuser\\.nuget\\packages\\": {}
+    "C:\\Users\\nicol\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\localuser\\Documents\\Neurone\\neural_network\\NeuralNetworks\\TrainingConsole\\TrainingConsole.csproj",
+      "projectUniqueName": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\neural_network\\NeuralNetworks\\TrainingConsole\\TrainingConsole.csproj",
       "projectName": "TrainingConsole",
-      "projectPath": "C:\\Users\\localuser\\Documents\\Neurone\\neural_network\\NeuralNetworks\\TrainingConsole\\TrainingConsole.csproj",
-      "packagesPath": "C:\\Users\\localuser\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\localuser\\Documents\\Neurone\\neural_network\\NeuralNetworks\\TrainingConsole\\obj\\",
+      "projectPath": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\neural_network\\NeuralNetworks\\TrainingConsole\\TrainingConsole.csproj",
+      "packagesPath": "C:\\Users\\nicol\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\neural_network\\NeuralNetworks\\TrainingConsole\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\localuser\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\nicol\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -177,24 +177,24 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Users\\localuser\\Desktop": {},
+        "C:\\Users\\nicol\\source\\repos\\net": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\localuser\\Documents\\Neurone\\neural_network\\NeuralNetworks\\DataProviders\\DataProviders.csproj": {
-              "projectPath": "C:\\Users\\localuser\\Documents\\Neurone\\neural_network\\NeuralNetworks\\DataProviders\\DataProviders.csproj"
+            "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\neural_network\\NeuralNetworks\\DataProviders\\DataProviders.csproj": {
+              "projectPath": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\neural_network\\NeuralNetworks\\DataProviders\\DataProviders.csproj"
             },
-            "C:\\Users\\localuser\\Documents\\Neurone\\neural_network\\NeuralNetworks\\NeuralNetwork.Common\\NeuralNetwork.Common.csproj": {
-              "projectPath": "C:\\Users\\localuser\\Documents\\Neurone\\neural_network\\NeuralNetworks\\NeuralNetwork.Common\\NeuralNetwork.Common.csproj"
+            "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\neural_network\\NeuralNetworks\\NeuralNetwork.Common\\NeuralNetwork.Common.csproj": {
+              "projectPath": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\neural_network\\NeuralNetworks\\NeuralNetwork.Common\\NeuralNetwork.Common.csproj"
             },
-            "C:\\Users\\localuser\\Documents\\Neurone\\neural_network\\NeuralNetworks\\NeuralNetwork\\NeuralNetwork.csproj": {
-              "projectPath": "C:\\Users\\localuser\\Documents\\Neurone\\neural_network\\NeuralNetworks\\NeuralNetwork\\NeuralNetwork.csproj"
+            "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\neural_network\\NeuralNetworks\\NeuralNetwork\\NeuralNetwork.csproj": {
+              "projectPath": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\neural_network\\NeuralNetworks\\NeuralNetwork\\NeuralNetwork.csproj"
             },
-            "C:\\Users\\localuser\\Documents\\Neurone\\neural_network\\NeuralNetworks\\Trainer\\Trainer.csproj": {
-              "projectPath": "C:\\Users\\localuser\\Documents\\Neurone\\neural_network\\NeuralNetworks\\Trainer\\Trainer.csproj"
+            "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\neural_network\\NeuralNetworks\\Trainer\\Trainer.csproj": {
+              "projectPath": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\neural_network\\NeuralNetworks\\Trainer\\Trainer.csproj"
             }
           }
         }
@@ -223,7 +223,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   }

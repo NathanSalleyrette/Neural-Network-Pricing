@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "D4+5KSmSdjTq0Ix2l3gmR2yOj55rlCvfbhhlaLpLl3pX9qdypyWP2zrG8H0hPfeJZ9QaLeWRVkBBsB9XR0TNAg==",
+  "dgSpecHash": "/J5U5gYrMgDSLh2iZFU1Alk5spjzWF6BTRfd+4JIS22cYTTlhoeXIceD+ypTygOTI0Chg24yCBL6H3cDXe7pmg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\localuser\\Documents\\Neurone\\neural_network\\NeuralNetworks\\NeuralNetwork\\NeuralNetwork.csproj",
+  "projectFilePath": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\neural_network\\NeuralNetworks\\NeuralNetwork\\NeuralNetwork.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\localuser\\.nuget\\packages\\mathnet.numerics\\4.15.0\\mathnet.numerics.4.15.0.nupkg.sha512",
-    "C:\\Users\\localuser\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+    "C:\\Users\\nicol\\.nuget\\packages\\mathnet.numerics\\4.15.0\\mathnet.numerics.4.15.0.nupkg.sha512",
+    "C:\\Users\\nicol\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
   ],
   "logs": []
 }

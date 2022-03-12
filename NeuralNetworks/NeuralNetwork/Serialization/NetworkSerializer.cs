@@ -34,6 +34,24 @@ namespace NeuralNetwork.Serialization
                         
                         break;
 
+                    case L1Layer l1l:
+                        var bsl1 = l1l.StandardLayer;
+                        var SerializedStandardlayerFromL1 = new SerializedStandardLayer(bsl1.InitialBias.ToColumnMajorArray(), bsl1.InitialWeights.ToArray(), bsl1.Activator.Type, bsl1.GradientAdjustment);
+
+                        var SerializedL1layer = new SerializedL2PenaltyLayer(SerializedStandardlayerFromL1, l1l.PenaltyCoefficient);
+                        SerializedLayers[i] = SerializedL1layer;
+
+                        break;
+
+                    case WeightDecayLayer wdl:
+                        var wdbsl = wdl.StandardLayer;
+                        var SerializedStandardLayerFromWeightDecay = new SerializedStandardLayer(wdbsl.InitialBias.ToColumnMajorArray(), wdbsl.InitialWeights.ToArray(), wdbsl.Activator.Type, wdbsl.GradientAdjustment);
+
+                        var SerializedWeightDecayLayer = new SerializedL2PenaltyLayer(SerializedStandardLayerFromWeightDecay, wdl.DecayRate);
+                        SerializedLayers[i] = SerializedWeightDecayLayer;
+
+                        break;
+
                     case InputStandardizingLayer isl:
 
                         var usl = isl.UnderlyingLayer as BasicStandardLayer;
@@ -42,6 +60,13 @@ namespace NeuralNetwork.Serialization
                         var SerializedISLLayer = new SerializedInputStandardizingLayer(SerializedUsl, isl.Mean, isl.Stddev);
                         SerializedLayers[i] = SerializedISLLayer;
 
+                        break;
+
+                    case DropoutLayer dl:
+
+                        var SerializedDl = new SerializedDropoutLayer(dl.LayerSize, dl.KeepProbability);
+                        SerializedLayers[i] = SerializedDl;
+                        
                         break;
 
                     default:

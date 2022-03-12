@@ -86,8 +86,8 @@
         ],
         "ActivatorType": "LeakyRelU",
         "GradientAdjustmentParameters": {
-          "LearningRate": 0.2,
-          "Momentum": 0.1,
+          "LearningRate": 3e-5,
+          "Momentum": 0.2,
           "Type": "Momentum"
         },
         "Type": "Standard"
@@ -95,7 +95,7 @@
     },
     {
       "Type": "L2Penalty",
-      "PenaltyCoefficient": 0.2,
+      "PenaltyCoefficient": 0.1,
       "UnderlyingSerializedLayer": {
         "Bias": [
           0.009,
@@ -125,7 +125,7 @@
         ],
         "ActivatorType": "LeakyRelU",
         "GradientAdjustmentParameters": {
-          "LearningRate": 0.15,
+          "LearningRate": 3e-5,
           "Type": "Momentum",
           "Momentum": 0.05
 
@@ -135,7 +135,7 @@
     },
     {
       "Type": "L2Penalty",
-      "PenaltyCoefficient": 0.1,
+      "PenaltyCoefficient": 0.05,
       "UnderlyingSerializedLayer": {
         "Bias": [
           0.001
@@ -150,7 +150,7 @@
         ],
         "ActivatorType": "Identity",
         "GradientAdjustmentParameters": {
-          "LearningRate": 0.1,
+          "LearningRate": 3e-5,
           "Type": "Momentum",
           "Momentum": 0.2
 

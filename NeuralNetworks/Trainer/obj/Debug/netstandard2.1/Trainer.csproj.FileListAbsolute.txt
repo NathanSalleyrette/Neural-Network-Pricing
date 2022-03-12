@@ -10,6 +10,7 @@ C:\Users\localuser\Documents\Neurone\NeuralNetworks\Trainer\obj\Debug\netstandar
 C:\Users\localuser\Documents\Neurone\NeuralNetworks\Trainer\obj\Debug\netstandard2.1\Trainer.csproj.CopyComplete
 C:\Users\localuser\Documents\Neurone\NeuralNetworks\Trainer\obj\Debug\netstandard2.1\Trainer.dll
 C:\Users\localuser\Documents\Neurone\NeuralNetworks\Trainer\obj\Debug\netstandard2.1\Trainer.pdb
+<<<<<<< Updated upstream
 C:\Users\nicol\OneDrive\Documents\GitHub\neural_network\NeuralNetworks\Trainer\bin\Debug\netstandard2.1\Trainer.deps.json
 C:\Users\nicol\OneDrive\Documents\GitHub\neural_network\NeuralNetworks\Trainer\bin\Debug\netstandard2.1\Trainer.dll
 C:\Users\nicol\OneDrive\Documents\GitHub\neural_network\NeuralNetworks\Trainer\bin\Debug\netstandard2.1\Trainer.pdb
@@ -35,3 +36,5 @@ C:\Users\localuser\Documents\Neurone\neural_network\NeuralNetworks\Trainer\obj\D
 C:\Users\localuser\Documents\Neurone\neural_network\NeuralNetworks\Trainer\obj\Debug\netstandard2.1\Trainer.csproj.CopyComplete
 C:\Users\localuser\Documents\Neurone\neural_network\NeuralNetworks\Trainer\obj\Debug\netstandard2.1\Trainer.dll
 C:\Users\localuser\Documents\Neurone\neural_network\NeuralNetworks\Trainer\obj\Debug\netstandard2.1\Trainer.pdb
+=======
+>>>>>>> Stashed changes

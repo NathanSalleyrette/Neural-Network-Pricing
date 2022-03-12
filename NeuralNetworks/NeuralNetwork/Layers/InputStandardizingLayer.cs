@@ -45,12 +45,20 @@ namespace NeuralNetwork.Layers
 
         public void Propagate(Matrix<double> input)
         {
-            input.MapIndexedInplace(
-                (row,col, value) => {
+            //input.MapIndexedInplace(
+            //    (row, col, value) =>
+            //    {
+            //        double norm = (value - Mean[row]) / Stddev[row];
+            //        return norm;
+            //    }
+            //    );
+            UnderlyingLayer.Propagate(input.MapIndexed(
+                (row, col, value) =>
+                {
                     double norm = (value - Mean[row]) / Stddev[row];
-                    return norm; }
-                );
-            UnderlyingLayer.Propagate(input);
+                    return norm;
+                }
+                ));
         }
 
         public void UpdateParameters()

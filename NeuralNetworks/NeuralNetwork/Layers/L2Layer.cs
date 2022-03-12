@@ -32,6 +32,7 @@ namespace NeuralNetwork.Layers
         public void BackPropagate(Matrix<double> upstreamWeightedErrors)
         {
             StandardLayer.BackPropagate(upstreamWeightedErrors);
+            StandardLayer.GradientWeight = StandardLayer.GradientWeight.Add(StandardLayer.InitialWeights.Multiply(PenaltyCoefficient));
         }
 
         public bool Equals(ILayer other)
@@ -47,7 +48,7 @@ namespace NeuralNetwork.Layers
         public void UpdateParameters()
         {
             // On update en modifiant la descente de gradient
-            StandardLayer.UpdateParameters(PenaltyCoefficient);
+            StandardLayer.UpdateParameters();
         }
     }
 }
