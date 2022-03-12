@@ -17,15 +17,19 @@ namespace NeuralNetwork.Gradients
         public Matrix<double> RWeight { get; set; }
         public Matrix<double> RPrimeWeight { get; set; }
         public Matrix<double> RBias { get; set; }
+        public Matrix<double> RBiasColumn { get; set; }
+
         public Matrix<double> RPrimeBias { get; set; }
 
         public Matrix<double> SWeight { get; set; }
         public Matrix<double> SPrimeWeight { get; set; }
         public Matrix<double> SBias { get; set; }
+        public Matrix<double> SBiasColumn { get; set; }
+
         public Matrix<double> SPrimeBias { get; set; }
-        public Matrix<double> vWeight { get; set; }
-        public Matrix<double> vBias { get; set; }
-        public int i { get; set; }
+        public Matrix<double> VMatWeight { get; set; }
+        public Matrix<double> VMatBias { get; set; }
+        public int I { get; set; }
 
         public Adam(AdamParameters gradient, Matrix<double> weight, Matrix<double> bias, int batchSize)
         {
@@ -35,54 +39,68 @@ namespace NeuralNetwork.Gradients
             ExponentialDecayRateTwo = gradient.SecondMomentDecay;
             
 
-            vWeight = Matrix<double>.Build.Dense(weight.RowCount, weight.ColumnCount, 0.0);
-            vBias = Matrix<double>.Build.Dense(bias.RowCount, bias.ColumnCount, 0.0);
+            //vWeight = Matrix<double>.Build.Dense(weight.RowCount, weight.ColumnCount, 0.0);
+            //vBias = Matrix<double>.Build.Dense(bias.RowCount, bias.ColumnCount, 0.0);
 
 
             RWeight = Matrix<double>.Build.Dense(weight.RowCount, weight.ColumnCount, 0.0);
-            RPrimeWeight = Matrix<double>.Build.Dense(weight.RowCount, weight.ColumnCount, 0.0);
-            RBias = Matrix<double>.Build.Dense(bias.RowCount, bias.ColumnCount, 0.0);
-            RPrimeBias = Matrix<double>.Build.Dense(bias.RowCount, bias.ColumnCount, 0.0);
+            //RPrimeWeight = Matrix<double>.Build.Dense(weight.RowCount, weight.ColumnCount, 0.0);
+            RBiasColumn = Matrix<double>.Build.Dense(bias.RowCount, bias.ColumnCount, 0.0);
+            //RPrimeBias = Matrix<double>.Build.Dense(bias.RowCount, bias.ColumnCount, 0.0);
 
 
             SWeight = Matrix<double>.Build.Dense(weight.RowCount, weight.ColumnCount, 0.0);
-            SPrimeWeight = Matrix<double>.Build.Dense(weight.RowCount, weight.ColumnCount, 0.0);
-            SBias = Matrix<double>.Build.Dense(bias.RowCount, bias.ColumnCount, 0.0);
-            SPrimeBias = Matrix<double>.Build.Dense(bias.RowCount, bias.ColumnCount, 0.0);
-            vWeight = Matrix<double>.Build.Dense(weight.RowCount, weight.ColumnCount, 0.0);
-            vBias = Matrix<double>.Build.Dense(bias.RowCount, bias.ColumnCount, 0.0);
+            //SPrimeWeight = Matrix<double>.Build.Dense(weight.RowCount, weight.ColumnCount, 0.0);
+            
+            SBiasColumn = Matrix<double>.Build.Dense(bias.RowCount, bias.ColumnCount, 0.0);
+            //SPrimeBias = Matrix<double>.Build.Dense(bias.RowCount, bias.ColumnCount, 0.0);
+            //vWeight = Matrix<double>.Build.Dense(weight.RowCount, weight.ColumnCount, 0.0);
+            //vBias = Matrix<double>.Build.Dense(bias.RowCount, bias.ColumnCount, 0.0);
 
 
-            i = 0;
+            I = 0;
         }
         public Func<Matrix<double>, Matrix<double>> VWeight => (mat) =>
         {
-            i++;
+            I++;
             SWeight = SWeight.Multiply(ExponentialDecayRateOne) + mat.Multiply(1 - ExponentialDecayRateOne);
             RWeight = RWeight.Multiply(ExponentialDecayRateTwo) + mat.PointwiseMultiply(mat).Multiply(1 - ExponentialDecayRateTwo);
 
-            SPrimeWeight = SWeight.Multiply(1.0 / (1 - Math.Pow(ExponentialDecayRateOne, i)));
-            RPrimeWeight = RWeight.Multiply(1.0 / (1 - Math.Pow(ExponentialDecayRateTwo, i)));
+            SPrimeWeight = SWeight.Multiply(1.0 / (1 - Math.Pow(ExponentialDecayRateOne, I)));
+            RPrimeWeight = RWeight.Multiply(1.0 / (1 - Math.Pow(ExponentialDecayRateTwo, I)));
 
             RPrimeWeight = RPrimeWeight.PointwiseSqrt().Add(NumericalStabilizer);
 
-            vWeight = SPrimeWeight.PointwiseDivide(RPrimeWeight).Multiply(-StepSize);
+            VMatWeight = SPrimeWeight.PointwiseDivide(RPrimeWeight).Multiply(-StepSize);
 
-            return vWeight;
+            return VMatWeight;
         };
         public Func<Matrix<double>, Matrix<double>> VBias => (mat) =>
         {
+            SBias = SBiasColumn.Multiply(Matrix<double>.Build.Dense(1, mat.ColumnCount, 1.0));
             SBias = SBias.Multiply(ExponentialDecayRateOne) + mat.Multiply(1 - ExponentialDecayRateOne);
+
+            SBiasColumn = SBias.FoldColumns<double>(
+               (s, x) => s + x,
+               Vector<double>.Build.Dense(SBias.RowCount, 0.0))
+                .Multiply((double)1 / SBias.ColumnCount).ToColumnMatrix();
+
+            RBias = RBiasColumn.Multiply(Matrix<double>.Build.Dense(1, mat.ColumnCount, 1.0));
             RBias = RBias.Multiply(ExponentialDecayRateTwo) + mat.PointwiseMultiply(mat).Multiply(1 - ExponentialDecayRateTwo);
 
-            SPrimeBias = SBias.Multiply(1.0 / (1 - Math.Pow(ExponentialDecayRateOne, i)));
-            RPrimeBias = RBias.Multiply(1.0 / (1 - Math.Pow(ExponentialDecayRateTwo, i)));
+            RBiasColumn = RBias.FoldColumns<double>(
+                (s, x) => s + x,
+                 Vector<double>.Build.Dense(RBias.RowCount, 0.0))
+                    .Multiply((double)1 / RBias.ColumnCount).ToColumnMatrix();
+
+            SPrimeBias = SBias.Multiply(1.0 / (1 - Math.Pow(ExponentialDecayRateOne, I)));
+            RPrimeBias = RBias.Multiply(1.0 / (1 - Math.Pow(ExponentialDecayRateTwo, I)));
 
             RPrimeBias = RPrimeBias.PointwiseSqrt().Add(NumericalStabilizer);
 
-            vBias = SPrimeBias.PointwiseDivide(RPrimeBias).Multiply(-StepSize);
+            VMatBias = SPrimeBias.PointwiseDivide(RPrimeBias).Multiply(-StepSize);
 
-            return vBias;
+            return VMatBias;
         };
 
         public double LearningRate => throw new NotImplementedException();
